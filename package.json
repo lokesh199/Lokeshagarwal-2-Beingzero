@@ -1,0 +1,23 @@
+{
+  "name": "lokeshagarwal-2-beingzero",
+  "version": "1.0.0",
+  "description": "MEAN FULL Stack Dev - Week 2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokesh199/Lokeshagarwal-2-Beingzero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lokesh199/Lokeshagarwal-2-Beingzero/issues"
+  },
+  "homepage": "https://github.com/lokesh199/Lokeshagarwal-2-Beingzero#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
