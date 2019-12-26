@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe Game</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+        <!--<link rel="stylesheet" href="/frontend/css/style.css">-->
+
+        <style>
+            table{
+                margin-top: 60px;
+            }
+            td{
+                width: 100px;
+                height: 100px;
+                font-size: 3em;
+                text-align: center;
+            }
+            .fullb
+            {
+                border: 2px solid red;
+            }
+            .leftrightb
+            {
+                border-left: 2px solid red;
+                border-right: 2px solid red;
+            }
+            .updownb
+            {
+                border-top: 2px solid red;
+                border-bottom: 2px solid red;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <h1 class="text-primary text-center">Tic Tac Toe</h1>
+    
+
+        <table  align="center">
+            <tr>
+                <td></td>
+                <td class="leftrightb"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="updownb"></td>
+                <td class="fullb"></td>
+                <td class="updownb"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="leftrightb"></td>
+                <td ></td>
+            </tr>
+        </table>
+        
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="/frontend/js/site.js"></script>
+
+
+
+        <script>
+            var isX = true;
+            var arr = new Array(3);
+            arr[0] = new Array(3);
+            arr[1] = new Array(3);
+            arr[2] = new Array(3);
+            $("table td").click(function(){
+                
+                var column_no = $(this).index();
+                var row_no = $(this).parent().index();
+                //alert(column_no + " " + row_no);
+                if(isX == true)
+                {
+                    $(this).text("X");
+                    arr[row_no][column_no] = "X";
+                    isX = false;
+                }
+                else 
+                {
+                    $(this).text("O");
+                    arr[row_no][column_no] = "O";
+                    isX = true;
+                }
+                for(var i=0 ; i<3 ; i++)
+                {
+                    var str="";
+                    for(var j=0 ; j<3 ; j++)
+                    {
+                        str += arr[i][j] + "  ";
+                    }
+                    console.log(str);
+                }
+
+
+            })
+        </script>
+
+
+
+    </body>
+</html>
